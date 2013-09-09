@@ -1,0 +1,404 @@
+
+
+Building a new DB, current time: 07/30/2013 15:24:50
+New DB name:   ./CDH
+New DB title:  ./CDH
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 23 sequences in 0.003474 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:26:37
+New DB name:   ./CE1.txt
+New DB title:  ./CE1.txt
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 32 sequences in 0.00344706 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:28:11
+New DB name:   ./CE12
+New DB title:  ./CE12
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 16 sequences in 0.00269103 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:29:18
+New DB name:   ./CE15
+New DB title:  ./CE15
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 36 sequences in 0.00377798 seconds.
+["CHAFR746836.1.1_0060450.1", "CHAFR746836.1.1_0060450.1", "Aurde1_199596", "Aurde1_199596", "71.05", "0.0"]
+
+
+Building a new DB, current time: 07/30/2013 15:30:59
+New DB name:   ./CE16_group1
+New DB title:  ./CE16_group1
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 52 sequences in 0.00455594 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:32:17
+New DB name:   ./CE16_group2
+New DB title:  ./CE16_group2
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 103 sequences in 0.00882721 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:33:50
+New DB name:   ./CE5
+New DB title:  ./CE5
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 68 sequences in 0.00560594 seconds.
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Punst1_107590", "Punst1_107590", "68.24", "4e-112"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Aurde1_137818", "Aurde1_137818", "66.83", "1e-105"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Aurde1_152466", "Aurde1_152466", "62.98", "2e-105"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Crypa1_39893", "Crypa1_39893", "64.84", "5e-104"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Aurde1_137026", "Aurde1_137026", "67.15", "3e-101"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Stehi1_69811", "Stehi1_69811", "61.64", "7e-100"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Trire2_54219", "Trire2_54219", "64.29", "3e-95"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Trire2_73632", "Trire2_73632", "62.28", "3e-93"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Crypa1_18173", "Crypa1_18173", "58.26", "5e-86"]
+["CHAFR746836.1.1_0079100.1", "CHAFR746836.1.1_0079100.1", "Crypa1_50471", "Crypa1_50471", "57.78", "4e-80"]
+
+
+Building a new DB, current time: 07/30/2013 15:35:30
+New DB name:   ./CE8
+New DB title:  ./CE8
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 64 sequences in 0.00549102 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:36:57
+New DB name:   ./cytb652
+New DB title:  ./cytb652
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 15 sequences in 0.00251508 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:38:10
+New DB name:   ./DyP
+New DB title:  ./DyP
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 37 sequences in 0.00391316 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:39:35
+New DB name:   ./Fet3_MCOother
+New DB title:  ./Fet3_MCOother
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 99 sequences in 0.00780892 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:41:30
+New DB name:   ./GH11
+New DB title:  ./GH11
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 31 sequences in 0.00333309 seconds.
+["CHAFR746836.1.1_0026010.1", "CHAFR746836.1.1_0026010.1", "Stano1_8965", "Stano1_8965", "68.14", "1e-103"]
+["CHAFR746836.1.1_0026010.1", "CHAFR746836.1.1_0026010.1", "Stano1_7789", "Stano1_7789", "66.23", "5e-100"]
+
+
+Building a new DB, current time: 07/30/2013 15:43:01
+New DB name:   ./GH12
+New DB title:  ./GH12
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 63 sequences in 0.00525188 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:44:35
+New DB name:   ./GH28_group1
+New DB title:  ./GH28_group1
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 36 sequences in 0.00383711 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:46:08
+New DB name:   ./Gh28_group2
+New DB title:  ./Gh28_group2
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 58 sequences in 0.00510406 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:47:47
+New DB name:   ./GH28_group3
+New DB title:  ./GH28_group3
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 135 sequences in 0.00978994 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:49:25
+New DB name:   ./GH3_b_glucosid_group3
+New DB title:  ./GH3_b_glucosid_group3
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 124 sequences in 0.0118501 seconds.
+["CHAFR746836.1.1_0067890.1", "CHAFR746836.1.1_0067890.1", "Crypa1_86359", "Crypa1_86359", "67.76", "0.0"]
+
+
+Building a new DB, current time: 07/30/2013 15:52:00
+New DB name:   ./GH3_b_N_acetyl_glucosaminid
+New DB title:  ./GH3_b_N_acetyl_glucosaminid
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 23 sequences in 0.00302696 seconds.
+["CHAFR746836.1.1_0030260.1", "CHAFR746836.1.1_0030260.1", "Trire2_79669", "Trire2_79669", "64.12", "0.0"]
+["CHAFR746836.1.1_0030260.1", "CHAFR746836.1.1_0030260.1", "Crypa1_109386", "Crypa1_109386", "62.37", "0.0"]
+
+
+Building a new DB, current time: 07/30/2013 15:53:20
+New DB name:   ./GH3_b_xylosidases
+New DB title:  ./GH3_b_xylosidases
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 25 sequences in 0.00374103 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:54:43
+New DB name:   ./GH3_group1and2
+New DB title:  ./GH3_group1and2
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 105 sequences in 0.00857997 seconds.
+["CHAFR746836.1.1_0080540.1", "CHAFR746836.1.1_0080540.1", "Crypa1_52804", "Crypa1_52804", "68.66", "0.0"]
+
+
+Building a new DB, current time: 07/30/2013 15:56:35
+New DB name:   ./GH5_group1_endogluc
+New DB title:  ./GH5_group1_endogluc
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 67 sequences in 0.00584102 seconds.
+
+
+Building a new DB, current time: 07/30/2013 15:58:14
+New DB name:   ./GH5_group2_mannan
+New DB title:  ./GH5_group2_mannan
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 64 sequences in 0.00602698 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:00:00
+New DB name:   ./GH61_group1
+New DB title:  ./GH61_group1
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 132 sequences in 0.01054 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:02:30
+New DB name:   ./GH61_group2
+New DB title:  ./GH61_group2
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 129 sequences in 0.0149369 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:05:15
+New DB name:   ./GH74
+New DB title:  ./GH74
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 24 sequences in 0.00317693 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:07:07
+New DB name:   ./GH_10
+New DB title:  ./GH_10
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 91 sequences in 0.00703192 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:08:51
+New DB name:   ./GH_6.txt
+New DB title:  ./GH_6.txt
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 28 sequences in 0.00339794 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:10:24
+New DB name:   ./GH_7
+New DB title:  ./GH_7
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 65 sequences in 0.0055151 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:12:02
+New DB name:   ./GLP
+New DB title:  ./GLP
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 96 sequences in 0.00675488 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:13:34
+New DB name:   ./HTP_1
+New DB title:  ./HTP_1
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 45 sequences in 0.00422502 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:14:59
+New DB name:   ./HTP_2
+New DB title:  ./HTP_2
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 42 sequences in 0.00404811 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:16:20
+New DB name:   ./HTP_3
+New DB title:  ./HTP_3
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 54 sequences in 0.00486302 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:17:37
+New DB name:   ./L_ascor_oxid
+New DB title:  ./L_ascor_oxid
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 13 sequences in 0.00227785 seconds.
+["CHAFR746836.1.1_0079720.1", "CHAFR746836.1.1_0079720.1", "Stano1_5129", "Stano1_5129", "52.04", "0.0"]
+
+
+Building a new DB, current time: 07/30/2013 16:18:54
+New DB name:   ./Lacc_Bas_Asco
+New DB title:  ./Lacc_Bas_Asco
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+
+volume: ./Lacc_Bas_Asco
+
+file: ./Lacc_Bas_Asco.pin
+file: ./Lacc_Bas_Asco.phr
+file: ./Lacc_Bas_Asco.psq
+
+
+
+Building a new DB, current time: 07/30/2013 16:18:54
+New DB name:   ./OXO_DEC
+New DB title:  ./OXO_DEC
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 74 sequences in 0.00612998 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:20:56
+New DB name:   ./POD
+New DB title:  ./POD
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 126 sequences in 0.00945497 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:22:37
+New DB name:   ./QRD
+New DB title:  ./QRD
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 58 sequences in 0.00487709 seconds.
+
+
+Building a new DB, current time: 07/30/2013 16:24:16
+New DB name:   ./relatedtomelaninsynthesisenzymes
+New DB title:  ./relatedtomelaninsynthesisenzymes
+Sequence type: Protein
+Keep Linkouts: T
+Keep MBits: T
+Maximum file size: 1000000000B
+Adding sequences from FASTA; added 14 sequences in 0.00253391 seconds.
