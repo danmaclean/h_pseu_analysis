@@ -1,0 +1,89 @@
+{
+    "a_galaxy_workflow": "true", 
+    "annotation": "", 
+    "format-version": "0.1", 
+    "name": "sequence to nlstradamus", 
+    "steps": {
+        "0": {
+            "annotation": "", 
+            "id": 0, 
+            "input_connections": {}, 
+            "inputs": [
+                {
+                    "description": "", 
+                    "name": "Input Dataset"
+                }
+            ], 
+            "name": "Input dataset", 
+            "outputs": [], 
+            "position": {
+                "left": 10, 
+                "top": 10
+            }, 
+            "tool_errors": null, 
+            "tool_id": null, 
+            "tool_state": "{\"name\": \"Input Dataset\"}", 
+            "tool_version": null, 
+            "type": "data_input", 
+            "user_outputs": []
+        }, 
+        "1": {
+            "annotation": "", 
+            "id": 1, 
+            "input_connections": {
+                "input1": {
+                    "id": 0, 
+                    "output_name": "output"
+                }
+            }, 
+            "inputs": [], 
+            "name": "getorf", 
+            "outputs": [
+                {
+                    "name": "out_file1", 
+                    "type": "fasta"
+                }
+            ], 
+            "position": {
+                "left": 230, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/devteam/emboss_5/EMBOSS: getorf42/5.0.0", 
+            "tool_state": "{\"__page__\": 0, \"flanking\": \"\\\"100\\\"\", \"input1\": \"null\", \"out_format1\": \"\\\"fasta\\\"\", \"reverse\": \"\\\"yes\\\"\", \"minsize\": \"\\\"30\\\"\", \"maxsize\": \"\\\"1000000\\\"\", \"methionine\": \"\\\"yes\\\"\", \"table\": \"\\\"0\\\"\", \"chromInfo\": \"\\\"tool-data/shared/ucsc/chrom/custom_contigs.len\\\"\", \"find\": \"\\\"0\\\"\", \"circular\": \"\\\"no\\\"\"}", 
+            "tool_version": null, 
+            "type": "tool", 
+            "user_outputs": []
+        }, 
+        "2": {
+            "annotation": "", 
+            "id": 2, 
+            "input_connections": {
+                "fasta_file": {
+                    "id": 1, 
+                    "output_name": "out_file1"
+                }
+            }, 
+            "inputs": [], 
+            "name": "NLStradamus", 
+            "outputs": [
+                {
+                    "name": "tabular_file", 
+                    "type": "tabular"
+                }
+            ], 
+            "position": {
+                "left": 450, 
+                "top": 10
+            }, 
+            "post_job_actions": {}, 
+            "tool_errors": null, 
+            "tool_id": "toolshed.g2.bx.psu.edu/repos/peterjc/nlstradamus/nlstradamus/0.0.8", 
+            "tool_state": "{\"__page__\": 0, \"algorithm\": \"\\\"1\\\"\", \"fasta_file\": \"null\", \"threshold\": \"\\\"0.6\\\"\", \"model\": \"\\\"1\\\"\", \"chromInfo\": \"\\\"tool-data/shared/ucsc/chrom/custom_contigs.len\\\"\"}", 
+            "tool_version": null, 
+            "type": "tool", 
+            "user_outputs": []
+        }
+    }
+}
