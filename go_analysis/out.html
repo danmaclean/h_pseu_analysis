@@ -1,0 +1,119 @@
+<h1 id="identifying-wood-decay-related-proteins-in-chalara-tgac-assembly-1.1">Identifying wood decay related proteins in Chalara TGAC Assembly 1.1</h1>
+<p>The list of CAZY wood decaying proteins in <a href="http://dx.doi.org/10.1126/science.1221748" title="Floudas">Floudas</a> was used as input to BLAST searches to identify proteins with strong sequence identity in the Chalara <a href="http://github.com/ash_dieback/chalara_fraxinea/Kenninghall_wood_KW1/annotations/Gene_predictions/TGAC_Chalara_fraxinea_ass_s1v1_ann_v1.1/Chalara_fraxinea_ass_s1v1_ann_v1.1.protein.faa">protein list</a>, with the following protocol:</p>
+<pre class="sourceCode ruby"><code class="sourceCode ruby"><span class="kw">#!/usr/bin/ruby</span>
+<span class="co"># encoding: utf-8</span>
+<span class="co">#</span>
+<span class="co">#  untitled.rb</span>
+<span class="co">#</span>
+<span class="co">#  Created by Dan MacLean (TSL) on 2013-07-30.</span>
+<span class="co">#  Copyright (c). All rights reserved.</span>
+<span class="co">#</span>
+require <span class="st">&#39;pp&#39;</span>
+require <span class="st">&#39;json&#39;</span>
+require <span class="st">&#39;csv&#39;</span>
+require <span class="st">&#39;bio&#39;</span>
+require <span class="st">&#39;barmcakes&#39;</span>
+
+
+require <span class="st">&#39;find&#39;</span>
+
+<span class="kw">def</span> format_db(file, type=prot)
+  system(<span class="st">&quot;makeblastdb -dbtype </span><span class="ot">#{</span>type<span class="ot">}</span><span class="st"> -in </span><span class="ot">#{</span>file<span class="ot">}</span><span class="st">&quot;</span>)
+<span class="kw">end</span>
+
+<span class="kw">def</span> find_files(start_dir, reg_exp)
+  <span class="dt">Find</span>.find(start_dir).select { |x| x =~ reg_exp}
+<span class="kw">end</span>
+
+
+<span class="kw">def</span> blast(input_file, database, program, pcmin,emin)
+  results = []
+        blast_file= <span class="st">`</span><span class="ot">#{</span>program<span class="ot">}</span><span class="st"> -db </span><span class="ot">#{</span>database<span class="ot">}</span><span class="st"> -query </span><span class="ot">#{</span>input_file<span class="ot">}</span><span class="st"> -outfmt &#39;10 qseqid qacc sseqid sacc pident evalue &#39; &gt; tmp`</span>
+        <span class="dt">File</span>.open(<span class="st">&quot;tmp&quot;</span>, <span class="st">&quot;r&quot;</span>).each_line <span class="kw">do</span> |line|
+          blast_r = line.gsub(<span class="ot">/\n/</span>,<span class="st">&quot;,&quot;</span>).split(<span class="st">&quot;,&quot;</span>)[<span class="dv">0</span>..<span class="dv">5</span>]
+          <span class="kw">if</span> blast_r[-<span class="dv">1</span>].to_f &lt;= emin.to_f <span class="kw">and</span> blast_r[-<span class="dv">2</span>].to_f &gt; pcmin <span class="kw">and</span> <span class="kw">not</span> blast_r[<span class="dv">0</span>] == blast_r[<span class="dv">2</span>]
+            puts <span class="st">&quot;</span><span class="ot">#{</span>blast_r<span class="ot">}</span><span class="st">&quot;</span>
+            results &lt;&lt; blast_r[<span class="dv">0</span>]
+          <span class="kw">end</span>
+        <span class="kw">end</span>
+        <span class="co">#$stderr.puts results</span>
+  <span class="kw">return</span> results.uniq.compact
+<span class="kw">end</span>
+
+<span class="kw">def</span> get_within_group_blast_limits(file,program=<span class="st">&quot;blastp&quot;</span> )
+  blast_file= <span class="st">`</span><span class="ot">#{</span>program<span class="ot">}</span><span class="st"> -db </span><span class="ot">#{</span>file<span class="ot">}</span><span class="st"> -query </span><span class="ot">#{</span>file<span class="ot">}</span><span class="st"> -num_alignments 2 -outfmt &#39;10 qseqid qacc sseqid sacc pident evalue &#39; &gt; within`</span>
+  pcs = []
+  es = []
+  <span class="dt">File</span>.open(<span class="st">&quot;within&quot;</span>, <span class="st">&quot;r&quot;</span>).each_line <span class="kw">do</span> |line|
+    arr = line.split(<span class="ot">/,/</span>)
+    <span class="kw">next</span> <span class="kw">if</span> arr[<span class="dv">0</span>] == arr[<span class="dv">2</span>]
+    pcs &lt;&lt; arr[-<span class="dv">2</span>].to_f
+    es &lt;&lt; arr[-<span class="dv">1</span>].chomp.to_f
+  <span class="kw">end</span>
+  <span class="co">#get value at 50 pc</span>
+  pcs_50 =  pcs.sort.reverse[(pcs.size / <span class="fl">2.0</span>).floor]
+  es_50 = es.sort.reverse[(es.size / <span class="fl">2.0</span>).floor]
+  <span class="dt">$stderr</span>.puts <span class="st">&quot;</span><span class="ot">#{</span>pcs.sort.reverse<span class="ot">}</span><span class="st"> = </span><span class="ot">#{</span>pcs_50<span class="ot">}</span><span class="st"> and </span><span class="ot">#{</span>es.sort.reverse<span class="ot">}</span><span class="st"> = </span><span class="ot">#{</span>es_50<span class="ot">}</span><span class="st">&quot;</span>
+  [pcs_50,es_50]
+<span class="kw">end</span>
+
+<span class="kw">def</span> count_proteins_per_org(file)
+    counts = <span class="dt">Hash</span>.new {|h,k| h[k] = <span class="dv">0</span> }
+    <span class="dt">Bio</span>::<span class="dt">FastaFormat</span>.open(file).each <span class="kw">do</span> |entry|
+      org = entry.entry_id.split(<span class="ot">/_/</span>)[<span class="dv">0</span>].gsub(<span class="ot">/\d/</span>,<span class="st">&quot;&quot;</span>)
+      counts[org] = counts[org] + <span class="dv">1</span>
+    <span class="kw">end</span>
+    counts
+<span class="kw">end</span>
+
+<span class="kw">def</span> clean_up
+  system(<span class="st">&quot;rm *.p*&quot;</span>)
+  system(<span class="st">&quot;rm tmp&quot;</span>)
+<span class="kw">end</span>
+
+
+args = <span class="dt">Arrghs</span>.parse_and_check(<span class="st">&quot;--fasta&quot;</span>=&gt; <span class="st">&quot;a fasta file of genes to search&quot;</span>,
+                              <span class="st">&quot;--start_dir&quot;</span> =&gt; <span class="st">&quot;directory to loop through&quot;</span>)
+
+
+<span class="co">##take each chalara protein blast it against each set of protein group files in turn</span>
+
+all_fams = []
+all_orgs = [<span class="st">&quot;Chalara&quot;</span>]
+result = <span class="dt">Hash</span>.new {|h,k| h[k] = <span class="dt">Hash</span>.new }
+files = <span class="dt">Dir</span>.glob(<span class="st">&quot;./*&quot;</span>)
+files.each <span class="kw">do</span> |file|
+  <span class="kw">next</span> <span class="kw">if</span> file == <span class="st">&#39;.&#39;</span> <span class="kw">or</span> file == <span class="st">&#39;..&#39;</span>
+  <span class="kw">next</span> <span class="kw">if</span> <span class="dt">File</span>.directory?(file)
+  <span class="kw">next</span> <span class="kw">if</span> file =~ <span class="ot">/DS_Store/</span>
+  <span class="kw">next</span> <span class="kw">if</span> file =~ <span class="ot">/heatmap/</span>
+  <span class="kw">next</span> <span class="kw">if</span> file =~ <span class="ot">/match/</span>
+  <span class="dt">$stderr</span>.puts <span class="st">&quot;Doing </span><span class="ot">#{</span>file<span class="ot">}</span><span class="st">...&quot;</span>
+  all_fams &lt;&lt; file
+  format_db(file, <span class="st">&quot;prot&quot;</span>)
+  pcmin,emin = get_within_group_blast_limits(file)
+  blast_results = blast(args[<span class="st">:fasta</span>],file,<span class="st">&quot;blastp&quot;</span>,pcmin,emin)
+  result[file][<span class="st">&quot;Chalara&quot;</span>] = blast_results.length
+  counts = count_proteins_per_org(file)
+  counts.each_pair <span class="kw">do</span> |org,c|
+    result[file][org] = c
+  <span class="kw">end</span>
+  all_orgs = all_orgs + counts.keys
+  clean_up
+<span class="kw">end</span>
+<span class="co">#$stderr.puts result</span>
+out = <span class="dt">File</span>.open(<span class="st">&quot;heatmap.txt&quot;</span>, <span class="st">&quot;w&quot;</span>)
+out.puts [<span class="st">&quot; &quot;</span>, all_orgs.uniq].uniq.compact.join(<span class="st">&quot;\t&quot;</span>)
+all_fams.uniq.each <span class="kw">do</span> |fam|
+  arr = [fam.gsub(<span class="ot">/\.\//</span>,<span class="st">&quot;&quot;</span>)]
+  all_orgs.uniq.each <span class="kw">do</span> |org|
+    <span class="kw">if</span> result[fam].has_key?(org)
+      arr &lt;&lt; result[fam][org]
+    <span class="kw">else</span>
+      arr &lt;&lt; <span class="dv">0</span>
+    <span class="kw">end</span>
+  <span class="kw">end</span>
+  out.puts arr.join(<span class="st">&quot;\t&quot;</span>)
+<span class="kw">end</span>
+out.close</code></pre>
+<h2 id="references">References</h2>
