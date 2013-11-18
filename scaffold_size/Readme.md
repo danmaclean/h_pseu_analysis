@@ -4,13 +4,15 @@
 
 NG(X) values for the H.pseudoalbidus scaffold assembly at [this link](https://github.com/ash-dieback-crowdsource/data/blob/master/ash_dieback/chalara_fraxinea/Kenninghall_wood_KW1/assemblies/gDNA/KW1_assembly_version1/Chalara_fraxinea_TGAC_s1v1_scaffolds.fa) were calculated with the script [here](calc_ng_50.rb) with the following command line:
 
- `ruby calc_ng_50.rb --fasta ~/src/data/ash_dieback/chalara_fraxinea/Kenninghall_wood_KW1/assemblies/gDNA/KW1_assembly_version1/Chalara_fraxinea_TGAC_s1v1_scaffolds.fa > NGX_chalara.csv`
+```{bash}
+ruby calc_ng_50.rb --fasta ~/src/data/ash_dieback/chalara_fraxinea/Kenninghall_wood_KW1/assemblies/gDNA/KW1_assembly_version1/Chalara_fraxinea_TGAC_s1v1_scaffolds.fa > NGX_chalara.csv
+```
 
 
 To create a plot of NG50 the following R code was used 
 
 
-```{r}
+```R
 	library(ggplot2)
 	library(ggthemes)
 	
