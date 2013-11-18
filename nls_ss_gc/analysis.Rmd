@@ -8,7 +8,7 @@ To work out whether the apparently collapsed repeats in the _Hymenoscyphus pseud
 * NLStradamus was run with default settings using this [Galaxy Workflow](Galaxy-Workflow-sequence_to_nlstradamus.ga), to create file [nlstradamus_results.tabular](nlstradamus_results.tabular).
 * Data were parsed from the results files using the following ruby script with this command line `ruby get_positions.rb nlstradamus_results.tabular `
 
-```
+```ruby
 require 'bio'
 require 'json'
 
@@ -95,7 +95,7 @@ end
 * These summary data were then loaded into R and a plot generated to show secretion signal occurence relative to nuclear signal occurence at different percent GC. 
 
 
-```{r fig.width=7, fig.height=6}
+```{S fig.width=7, fig.height=6}
 source('functions.R')
 source('load.R')
 ggplot(data, aes(gc_percent, log(ss_count / nls_count) ) ) + geom_point()
