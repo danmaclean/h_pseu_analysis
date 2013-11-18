@@ -1,5 +1,4 @@
 setup_environment <- function(){
-  setwd("~/Desktop/go_analysis")
   rm(list = ls())
   library('RJSONIO')
   library('ggplot2')

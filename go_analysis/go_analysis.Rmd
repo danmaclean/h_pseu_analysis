@@ -32,7 +32,6 @@ Separately the domain of the GO terms were mapped. Using the script [add_domain.
 These were then loaded into R:
 
 ```{r}
-setwd("~/Desktop/go_analysis")
 source('functions.R')
 setup_environment()
 
@@ -69,7 +68,7 @@ Then these were run through R to summarise. Only 1353 _Blumeria_ terms are avail
 ```{r}
  y <- ddply(data, c("term"),summarise,sum=sum(count))
  y <- mutate(y, transform, total=sum(sum))
- blumeria <- read.table("~/Desktop/go_analysis/blumeria_go_term_counts.txt", sep="\t", header=FALSE)
+ blumeria <- read.table("blumeria_go_term_counts.txt", sep="\t", header=FALSE)
  colnames(blumeria) <- c("term","sum","total")
  all <- merge(y,blumeria, by.x = 'term', by.y = 'term', all.x = TRUE, all.y =TRUE, incomparables = NA )
  y <- mutate(all, transform, ratio = (sum.x / total.x) / (sum.y / total.y) )

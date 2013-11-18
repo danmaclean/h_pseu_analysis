@@ -33,7 +33,6 @@ These were then loaded into R:
 
 
 ```S
-setwd("~/Desktop/go_analysis")
 source("functions.R")
 setup_environment()
 
@@ -63,8 +62,7 @@ ggplot(y, aes(sum)) + geom_histogram()
 ```
 
 ```
-## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust
-## this.
+## stat_bin: binwidth defaulted to range/30. Use 'binwidth = x' to adjust this.
 ```
 
 ![plot of chunk unnamed-chunk-3](figure/unnamed-chunk-3.png) 
@@ -79,13 +77,12 @@ ggplot(y, aes(namespace, sum, fill = description)) + geom_bar() + theme(legend.p
 ```
 
 ```
-## Mapping a variable to y and also using stat="bin".  With stat="bin", it
-## will attempt to set the y value to the count of cases in each group.  This
-## can result in unexpected behavior and will not be allowed in a future
-## version of ggplot2.  If you want y to represent counts of cases, use
-## stat="bin" and don't map a variable to y.  If you want y to represent
-## values in the data, use stat="identity".  See ?geom_bar for examples.
-## (Deprecated; last used in version 0.9.2)
+## Mapping a variable to y and also using stat="bin".
+##   With stat="bin", it will attempt to set the y value to the count of cases in each group.
+##   This can result in unexpected behavior and will not be allowed in a future version of ggplot2.
+##   If you want y to represent counts of cases, use stat="bin" and don't map a variable to y.
+##   If you want y to represent values in the data, use stat="identity".
+##   See ?geom_bar for examples. (Deprecated; last used in version 0.9.2)
 ```
 
 ![plot of chunk unnamed-chunk-4](figure/unnamed-chunk-4.png) 
@@ -102,8 +99,7 @@ Then these were run through R to summarise. Only 1353 _Blumeria_ terms are avail
 ```S
 y <- ddply(data, c("term"), summarise, sum = sum(count))
 y <- mutate(y, transform, total = sum(sum))
-blumeria <- read.table("~/Desktop/go_analysis/blumeria_go_term_counts.txt", 
-    sep = "\t", header = FALSE)
+blumeria <- read.table("blumeria_go_term_counts.txt", sep = "\t", header = FALSE)
 colnames(blumeria) <- c("term", "sum", "total")
 all <- merge(y, blumeria, by.x = "term", by.y = "term", all.x = TRUE, all.y = TRUE, 
     incomparables = NA)
