@@ -32,7 +32,7 @@ Separately the domain of the GO terms were mapped. Using the script [add_domain.
 These were then loaded into R:
 
 
-```r
+```S
 setwd("~/Desktop/go_analysis")
 source("functions.R")
 setup_environment()
@@ -45,7 +45,7 @@ data <- data_frame_from_json_file("terms_and_descriptions.json")
 
 ### How many proteins with GO Terms?
 
-```r
+```S
 length(levels(as.factor(data$gene)))
 ```
 
@@ -57,7 +57,7 @@ length(levels(as.factor(data$gene)))
 ### How many annotations per protein (sum = annotations per protein)?
 
 
-```r
+```S
 y <- ddply(data, c("gene"), summarise, sum = sum(count))
 ggplot(y, aes(sum)) + geom_histogram()
 ```
@@ -72,7 +72,7 @@ ggplot(y, aes(sum)) + geom_histogram()
 
 ### How many annotations from each GO category?
 
-```r
+```S
 y <- ddply(data, c("description", "namespace"), summarise, sum = sum(count))
 ggplot(y, aes(namespace, sum, fill = description)) + geom_bar() + theme(legend.position = "none") + 
     coord_polar(theta = "y")
@@ -99,7 +99,7 @@ I downloaded the latest GO annotations for the Blumeria genome v3.0 from [the ge
 
 Then these were run through R to summarise. Only 1353 _Blumeria_ terms are available and only 69 overlap between the _H.pseudoalbidus_ and _Blumeria_ . This is not enough to do proper enrichment analysis. The comparisons are summarised
 
-```r
+```S
 y <- ddply(data, c("term"), summarise, sum = sum(count))
 y <- mutate(y, transform, total = sum(sum))
 blumeria <- read.table("~/Desktop/go_analysis/blumeria_go_term_counts.txt", 
