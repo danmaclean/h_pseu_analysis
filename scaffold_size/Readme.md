@@ -12,7 +12,7 @@ ruby calc_ng_50.rb --fasta ~/src/data/ash_dieback/chalara_fraxinea/Kenninghall_w
 To create a plot of NG50 the following R code was used 
 
 
-```R
+```S
 	library(ggplot2)
 	library(ggthemes)
 	
