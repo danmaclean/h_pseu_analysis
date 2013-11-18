@@ -25,6 +25,6 @@ To create a plot of NG50 the following R code was used
 ```
 
 to create the following plot:
-![Rplot.svg](Rplot.svg)
+![Rplot.png](Rplot.png)
 
 
