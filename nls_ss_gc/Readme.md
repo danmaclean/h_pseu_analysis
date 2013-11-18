@@ -8,7 +8,7 @@ To work out whether the apparently collapsed repeats in the _Hymenoscyphus pseud
 * NLStradamus was run with default settings using this [Galaxy Workflow](Galaxy-Workflow-sequence_to_nlstradamus.ga), to create file [nlstradamus_results.tabular](nlstradamus_results.tabular).
 * Data were parsed from the results files using the following ruby script with this command line `ruby get_positions.rb nlstradamus_results.tabular `
 
-```
+```ruby
 require 'bio'
 require 'json'
 
@@ -53,7 +53,7 @@ end
 
 * To identify the number of NLS and SSL in 10kb windows across the genome assembly, and the average GC percentage of sequence in that window, the output JSON files were used in the following script with the command line `ruby ~/Desktop/analyse_frequency.rb --fasta Chalara_fraxinea_TGAC_s1v1_scaffolds.fa --nls nls.json --ss scaffolds_with_secretory_signal.json > nls_ss_gc.csv`
 
-```
+```ruby
 require 'pp'
 require 'json'
 require 'bio'
@@ -96,7 +96,7 @@ end
 
 
 
-```r
+```S
 source("functions.R")
 source("load.R")
 ggplot(data, aes(gc_percent, log(ss_count/nls_count))) + geom_point()
