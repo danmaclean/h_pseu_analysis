@@ -8,7 +8,7 @@ NG(X) values for the H.pseudoalbidus scaffold assembly at [this link](https://gi
 To create a plot of NG50 the following R code was used 
 
 
-```{R}
+```{r}
 	library(ggplot2)
 	library(ggthemes)
 	
@@ -25,6 +25,6 @@ To create a plot of NG50 the following R code was used
 ```
 
 to create the following plot:
-![Rplot.png](Rplot.png)
+![Plot](Rplot.png)
 
 
