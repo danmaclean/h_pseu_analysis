@@ -1,0 +1,30 @@
+
+ WARNING executed HMMER version has not been tested !!! 
+
+#      Statistics of the completeness of the genome based on 248 CEGs      #
+
+              #Prots  %Completeness  -  #Total  Average  %Ortho 
+
+  Complete      236       95.16      -   260     1.10      8.05
+
+   Group 1       61       92.42      -    66     1.08      6.56
+   Group 2       53       94.64      -    60     1.13      9.43
+   Group 3       59       96.72      -    69     1.17     13.56
+   Group 4       63       96.92      -    65     1.03      3.17
+
+   Partial      241       97.18      -   274     1.14     10.37
+
+   Group 1       63       95.45      -    69     1.10      7.94
+   Group 2       54       96.43      -    63     1.17     12.96
+   Group 3       60       98.36      -    74     1.23     16.67
+   Group 4       64       98.46      -    68     1.06      4.69
+
+#    These results are based on the set of genes selected by Genis Parra   #
+
+#    Key:                                                                  #
+#    Prots = number of 248 ultra-conserved CEGs present in genome          #
+#    %Completeness = percentage of 248 ultra-conserved CEGs present        #
+#    Total = total number of CEGs present including putative orthologs     #
+#    Average = average number of orthologs per CEG                         #
+#    %Ortho = percentage of detected CEGS that have more than 1 ortholog   #
+
