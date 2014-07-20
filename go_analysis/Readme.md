@@ -7,7 +7,7 @@ I wanted to analyse the proteins predicted by TGAC, to add GO annotations.
 
 ## Methods
 
-I submitted the protein sequences to the InterPRO webservice using the [run_ipr_async](run_ipr_async) script which wraps the EBI provided Perl script [iprscan5_lwp.pl](iprscan5_lwp.pl).
+I submitted the protein sequences to the InterPRO webservice using the [run_ipr_async](run_ipr_async.rb) script which wraps the EBI provided Perl script [iprscan5_lwp.pl](iprscan5_lwp.pl).
 
 To submit jobs the command line 
 
